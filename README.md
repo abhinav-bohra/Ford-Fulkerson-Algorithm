@@ -1,2 +1,2 @@
 # Ford-Fulkerson-Algorithm
-My implementation of Ford–Fulkerson algorithm to solve the famous Max-Flow Problem
+My implementation of Ford–Fulkerson method for computing the maximum flow in a flow network using he Edmonds–Karp algorithm. 
