@@ -1,9 +1,8 @@
-/*---------------------------------------------------------------------------------- 
-    Max-Flow Network | Edmonds Karp Algorithm
-
-    Name     : Abhinav Bohra
-    Roll No. : 18CS30049
-----------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------ 
+    Implementation of Ford–Fulkerson method for computing the maximum flow in a flow network using Edmonds–Karp algorithm.
+    Author - Abhinav Bohra
+    Date - November 4, 2020
+-------------------------------------------------------------------------------------------------------------------------------*/
 #include<stdlib.h>
 #include<stdio.h>
 #include <limits.h>
@@ -93,15 +92,8 @@ int main(){
     PrintGraph(*myGraph1);
 
     printf("\nAssignment Part 2 : Need Based Flow \n");
-	myGraph2 = ReadGraph(S);          
+    myGraph2 = ReadGraph(S);          
     NeedBasedFlow(myGraph2);
-    /*
-     * Kindly ignore the message of maxflow if "No Need Based Flow Exists." message is printed after it.
-     * This is because, to check feasibility of need based flow, computeMaxFlow() function is called which prints the maxFlow message,
-     * This message can be skipped if maxFlow is returned from function but
-     * the assignment does not allow to change the function definitions & hecnce its return type.
-    */
-
     //Print graph only if need based flow is feasible
     if(checkFeasibility(myGraph2)) PrintGraph(*myGraph2);
     else                            printf("\nNo Need Based Flow Exists.\n\n"); // Graph is not printed
